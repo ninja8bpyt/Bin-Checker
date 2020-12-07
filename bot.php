@@ -57,9 +57,17 @@ if ($text == "/start") {
                 'chat_id' =>$chat_id,
                 'text' =>"***$START_MESSAGE
 
-Use*** `/bin xxxxx` ***to check bin on bin-su.***",
+Format:*** /bin 76xxxxx",
  'parse_mode'=>'MarkDown',
-            
+ 'reply_markup' =>  json_encode([
+                'inline_keyboard' => [
+                    
+                        [['text' => "UPDATES CHANNEL",'url'=>"https://telegram.me/Discovery_Updates"], ['text' => "SUPPORT GROUP",'url'=>"https://telegram.me/linux_repo"]
+                    ],
+
+                    
+    ]
+])
         ]);
  }if(strpos($text,"/bin") !== false){ 
 $bin = trim(str_replace("/bin","",$text)); 
@@ -75,28 +83,35 @@ $country =  $data['data']['country'];
  if($data['data']){
 bot('sendmessage', [
                 'chat_id' =>$chat_id,
-                'text' =>"***VALID BIN✅
+                'text' =>"***Your Bin is Valid ✅
                
-➤ Bɪɴ : $bin
+➤ BIN: $bin
 
-➤ Tʏᴘᴇ : $type
+➤ Card Type: $type
 
-➤ Bʀᴀɴᴅ : $vendor
+➤ Brand: $vendor
 
-➤ Bᴀɴᴋ : $bank
+➤ Bank Name: $bank
 
-➤ Cᴏᴜɴᴛʀʏ : $country
+➤ Country: $country
 
-➤ Cʀᴇᴅɪᴛ/Dᴇʙɪᴛ : $type
-
-🔺BIN CHECKED FROM DATABASE OF BIN-SU🔻***",
+💳 BIN CHECKER DATABASE OF BIN-SU 💳***",
 'parse_mode'=>"MarkDown",
 ]);
     }
 else {
 bot('sendmessage', [
                 'chat_id' =>$chat_id,
-                'text' =>"INVALID BIN❌",
+                'text' =>"Your Bin is Invalid ❌",
+	'reply_markup' =>  json_encode([
+                'inline_keyboard' => [
+                    
+                        [['text' => "Try Again",'url'=>"https://t.me/BinChecker_Robot?start"]
+                    ],
+
+                    
+    ]
+])
                
 ]);
 }
