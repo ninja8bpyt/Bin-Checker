@@ -62,7 +62,7 @@ Format:*** /bin 76xxxxx",
  'reply_markup' =>  json_encode([
                 'inline_keyboard' => [
                     
-                        [['text' => "UPDATES CHANNEL",'url'=>"https://telegram.me/Discovery_Updates"], ['text' => "SUPPORT GROUP",'url'=>"https://telegram.me/linux_repo"]
+                        [['text' => "JOIN CHANNEL",'url'=>"https://telegram.me/BOTS_KI_DUNIYA"], ['text' => "REPORT ISSUES/BUGS",'url'=>"https://telegram.me/mr_ninjas_bot"]
                     ],
 
                     
@@ -95,7 +95,9 @@ bot('sendmessage', [
 
 ➤ Country: $country
 
-💳 BIN CHECKER DATABASE OF BIN-SU 💳***",
+💳 BIN CHECKER DATABASE OF BIN-SU 💳
+
+Join @Bots_Ki_Duniya***",
 'parse_mode'=>"MarkDown",
 ]);
     }
@@ -106,7 +108,7 @@ bot('sendmessage', [
 	'reply_markup' =>  json_encode([
                 'inline_keyboard' => [
                     
-                        [['text' => "Try Again",'url'=>"https://t.me/BinChecker_Robot?start"]
+                        [['text' => "REPORT ISSUES",'url'=>"https://t.me/Mr_Ninjas_Bot?start"]
                     ],
 
                     
